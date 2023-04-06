@@ -5,7 +5,7 @@ from django.db import models
 class Jamoa(models.Model):
     logotip = models.ImageField(upload_to='jamoa_rasm')
     jamoa_nomi = models.CharField(max_length=200)
-    rasm = models.ImageField(upload_to='jamoa_rasm', null=True, blank=True)
+    rasm = models.ImageField(upload_to='jamoa_rasm')
     malumot = models.TextField()
     shior = models.CharField(max_length=200, null=True, blank=True)
     email = models.CharField(max_length=100)
@@ -14,10 +14,10 @@ class Jamoa(models.Model):
     muallif = models.CharField(max_length=200)
 
 
-    albom1 = models.ImageField(upload_to='jamoa_rasm', null=True, blank=True)
-    albom2 = models.ImageField(upload_to='jamoa_rasm', null=True, blank=True)
-    albom3 = models.ImageField(upload_to='jamoa_rasm', null=True, blank=True)
-    albom4 = models.ImageField(upload_to='jamoa_rasm', null=True, blank=True)
+    albom1 = models.ImageField(upload_to='jamoa_rasm')
+    albom2 = models.ImageField(upload_to='jamoa_rasm')
+    albom3 = models.ImageField(upload_to='jamoa_rasm')
+    albom4 = models.ImageField(upload_to='jamoa_rasm')
     
     def __str__(self):
         return f"{self.jamoa_nomi} | {self.email} | {self.telefon}"
@@ -41,7 +41,7 @@ class Xizmat(models.Model):
 
 
 class Ishtirokchi(models.Model):
-    rasm = models.ImageField(upload_to='ishtirokchi_rasm', null=True, blank=True)
+    rasm = models.ImageField(upload_to='ishtirokchi_rasm')
     ism_sharif = models.CharField(max_length=200)
     tugilgan_yil = models.DateField(null=True, blank=True)
     manzil = models.CharField(max_length=200, null=True, blank=True)
@@ -73,7 +73,7 @@ class Statistika(models.Model):
 
 
 class Blog(models.Model):
-    rasm = models.ImageField(upload_to='blog_rasm', null=True, blank=True)
+    rasm = models.ImageField(upload_to='blog_rasm')
     mavzu = models.CharField(max_length=200)
     malumot = models.TextField(null=True, blank=True)
     vaqt = models.DateTimeField()
@@ -102,7 +102,7 @@ class Portfolio(models.Model):
     
 
 class Mijoz_fikri(models.Model):
-    rasm = models.ImageField(upload_to='blog_rasm', null=True, blank=True)
+    rasm = models.ImageField(upload_to='blog_rasm')
     ism_sharif = models.CharField(max_length=200)
     izoh = models.TextField()
 
